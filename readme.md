@@ -6,8 +6,6 @@ The package covers the following functions:
   - [create_pay_page] - Create Payment Page API
   - [verify_payment] - Verify Payment API
 
-[![Build Status](https://travis-ci.com/samymassoud/PayNet_golang_api.svg?branch=master)](https://travis-ci.com/samymassoud/PayNet_golang_api)
-
 # Installation
 To install this package please run
 > `go get github.com/Carnelian-Payment-Networks/paynet_golang_api_example`
