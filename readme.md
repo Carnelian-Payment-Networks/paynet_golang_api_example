@@ -29,9 +29,9 @@ var data = make(map[string]string)
 	data["unit_price"] = "10"                    //Quantity * price must be equal to amount
 	data["products_per_title"] = "Shoes | Jeans" //Change this to your products
 	data["return_url"] = "<MERCHANT CALLBACK>"   //This should be your callback url
-	data["cc_first_name"] = "Samy"               //Customer First Name
-	data["cc_last_name"] = "Saad"                //Customer Last Name
-	data["cc_phone_number"] = "00973"            //Country code
+	data["m_first_name"] = "Samy"               //Customer First Name
+	data["m_last_name"] = "Saad"                //Customer Last Name
+	data["m_phone_number"] = "00973"            //Country code
 	data["phone_number"] = "12345678"            //Customer Phone
 	data["billing_address"] = "Address"          //Billing Address
 	data["city"] = "Manama"                      //Billing City
@@ -77,7 +77,7 @@ import (
 verifyMap := make(map[string]string)
 verifyMap["merchant_email"] = "<MERCHANT_EMAIL>"
 verifyMap["secret_key"] = "<MERCHANT_SECRET>"
-verifyMap["payment_reference"] = "<ORDER_ID>"
+verifyMap["payment_reference"] = "<P_ID>"
 result, err := PayNet.VerifyPayment(verifyMap)
 if err != nil {
 	println(err)
