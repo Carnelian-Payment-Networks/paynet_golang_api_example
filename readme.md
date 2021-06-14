@@ -19,18 +19,18 @@ import (
 )
 
 var data = make(map[string]string)
-	data["merchant_email"] = "adhyaru_jigs@yahoo.co.in"
-	data["secret_key"] = "JckR4L0525gu6uD9JTTK3bXwJZbZrF4bRp2Wa22d8iIfNmoxfihjueQed2dFHiQzITvSWx64QOkEbJbr1sLwHBKUDYAlgrUYkpRg"
+	data["merchant_email"] = "<MERCHANT EMAIL>"
+	data["secret_key"] = "<MERCHANT SECRET KEY>"
 	data["currency"] = "USD"                     //change this to the required currency
 	data["amount"] = "10"                        //change this to the required amount
-	data["site_url"] = "www.innovatiivecreators.in"         //change this to reflect your site
+	data["site_url"] = "<SITE URL>"         //change this to reflect your site
 	data["title"] = "Sell products"              //Change this to reflect your order title
 	data["quantity"] = "1"                       //Quantity of the product
 	data["unit_price"] = "10"                    //Quantity * price must be equal to amount
 	data["products_per_title"] = "Shoes | Jeans" //Change this to your products
 	data["return_url"] = "<MERCHANT CALLBACK>"   //This should be your callback url
-	data["m_first_name"] = "Samy"               //Customer First Name
-	data["m_last_name"] = "Saad"                //Customer Last Name
+	data["m_first_name"] = "Rahul"               //Customer First Name
+	data["m_last_name"] = "Sharma"                //Customer Last Name
 	data["m_phone_number"] = "00973"            //Country code
 	data["phone_number"] = "12345678"            //Customer Phone
 	data["billing_address"] = "Address"          //Billing Address
