@@ -12,6 +12,8 @@ type payPageResponse struct {
 	Result       string `json:"result,ommitempty"`
 	ResponseCode string `json:"response_code,ommitempty"`
 	PaymentURL   string `json:"payment_url,ommitempty"`
+	PayPageId    string `json:"p_id,ommitempty"`
+	ReferenceNo    string `json:"ref_no,ommitempty"`
 }
 
 type generalResponse struct {
@@ -32,7 +34,7 @@ type verifyResponse struct {
 /**
 Create PaymentPage API
 **/
-func CretaePayPage(data map[string]string) (payPageResponse, error) {
+func CreatePayPage(data map[string]string) (payPageResponse, error) {
 	location := "https://merchants.paynet.co.in/apipaynet/generate_payment_page"
 	resp, err := sendRequest(location, data)
 
@@ -64,7 +66,7 @@ func ValidateSecretKey(data map[string]string) (generalResponse, error) {
 }
 
 func VerifyPayment(data map[string]string) (verifyResponse, error) {
-	location := "http://merchants.paynet.co.in/apipaynet/uphold_payment"
+	location := "https://merchants.paynet.co.in/apipaynet/uphold_payment"
 	resp, err := sendRequest(location, data)
 	if err != nil {
 		return verifyResponse{}, err

@@ -19,11 +19,11 @@ import (
 )
 
 var data = make(map[string]string)
-	data["merchant_email"] = "<MERCHANT_EMAIL>"
-	data["secret_key"] = "<MERCHANT_SECRET>"
+	data["merchant_email"] = "adhyaru_jigs@yahoo.co.in"
+	data["secret_key"] = "JckR4L0525gu6uD9JTTK3bXwJZbZrF4bRp2Wa22d8iIfNmoxfihjueQed2dFHiQzITvSWx64QOkEbJbr1sLwHBKUDYAlgrUYkpRg"
 	data["currency"] = "USD"                     //change this to the required currency
 	data["amount"] = "10"                        //change this to the required amount
-	data["site_url"] = "<MERCHANT SITE>"         //change this to reflect your site
+	data["site_url"] = "www.innovatiivecreators.in"         //change this to reflect your site
 	data["title"] = "Sell products"              //Change this to reflect your order title
 	data["quantity"] = "1"                       //Quantity of the product
 	data["unit_price"] = "10"                    //Quantity * price must be equal to amount
@@ -47,11 +47,12 @@ var data = make(map[string]string)
 	data["postal_code_shipping"] = "973"
 	data["country_shipping"] = "BHR"
 	data["other_charges"] = "0"                  //Other chargs can be here
-	data["reference_no"] = "1234"               //Pass the order id on your system for your reference
+	data["reference_no"] = "1234"  
+	data["refno"]="1234"             //Pass the order id on your system for your reference
 	data["msg_lang"] = "en"                     //The language for the response
 	data["cms_with_version"] = "Golang Lib v1"  //Feel free to change this
 
-	resp, err := PayNet.CretaePayPage(data)
+	resp, err := PayNet.CreatePayPage(data)
 
 	if err != nil {
 		fmt.Println(err)
@@ -77,7 +78,7 @@ import (
 verifyMap := make(map[string]string)
 verifyMap["merchant_email"] = "<MERCHANT_EMAIL>"
 verifyMap["secret_key"] = "<MERCHANT_SECRET>"
-verifyMap["payment_reference"] = "<P_ID>"
+verifyMap["payment_reference"] = "<ORDER_ID>"
 result, err := PayNet.VerifyPayment(verifyMap)
 if err != nil {
 	println(err)
