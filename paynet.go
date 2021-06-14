@@ -12,8 +12,8 @@ type payPageResponse struct {
 	Result       string `json:"result,ommitempty"`
 	ResponseCode string `json:"response_code,ommitempty"`
 	PaymentURL   string `json:"payment_url,ommitempty"`
-	PayPageId    string `json:"p_id,ommitempty"`
-	ReferenceNo    string `json:"ref_no,ommitempty"`
+	PayPageId    int    `json:"p_id,ommitempty"`
+	ReferenceNo  string `json:"ref_no,ommitempty"`
 }
 
 type generalResponse struct {
